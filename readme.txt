@@ -42,7 +42,7 @@ Add preloader to your website easily, responsive and retina, full customize, com
 
 ### About
 
-* [The plugin designed and developed by Alobaidi.](http://j.mp/1HVBgA6).
+* [The plugin designed and developed by Alobaidi.](http://j.mp/1HVBgA6)
 
 ### More Plugins
 
