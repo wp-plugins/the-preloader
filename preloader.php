@@ -3,7 +3,7 @@
 Plugin Name: Preloader
 Plugin URI: http://j.mp/1QRDUN0
 Description: Add preloader to your website easily, responsive and retina, full customize, compatible with all major browsers.
-Version: 1.0.0
+Version: 1.0.1
 Author: Alobaidi
 Author URI: http://j.mp/1HVBgA6
 License: GPLv2 or later
@@ -77,9 +77,7 @@ add_filter( 'plugin_action_links', 'WPTime_preloader_plugin_action_links', 10, 5
 
 
 // Include Settings page
-if ( is_admin() ){
-	include(plugin_dir_path(__FILE__).'/settings.php');
-}
+include(plugin_dir_path(__FILE__).'/settings.php');
 
 
 // Include JavaScript and HTML Element
