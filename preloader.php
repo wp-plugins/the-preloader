@@ -3,7 +3,7 @@
 Plugin Name: Preloader
 Plugin URI: http://j.mp/1QRDUN0
 Description: Add preloader to your website easily, responsive and retina, full customize, compatible with all major browsers.
-Version: 1.0.1
+Version: 1.0.2
 Author: Alobaidi
 Author URI: http://j.mp/1HVBgA6
 License: GPLv2 or later
@@ -24,6 +24,9 @@ License: GPLv2 or later
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
+
+
+defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 
 // Add plugin meta links
@@ -76,15 +79,40 @@ function WPTime_preloader_plugin_action_links( $actions, $plugin_file ){
 add_filter( 'plugin_action_links', 'WPTime_preloader_plugin_action_links', 10, 5 );
 
 
+// Set default setting of display preloader (default is full website)
+if( !get_option('wptpreloader_default_screen') ){
+	update_option('wptpreloader_screen', 'full');
+	update_option('wptpreloader_default_screen', 'full');
+}
+
+
 // Include Settings page
-include(plugin_dir_path(__FILE__).'/settings.php');
+include( plugin_dir_path(__FILE__).'/settings.php' );
 
 
-// Include JavaScript and HTML Element
+// Add Preloader HTML Element
+function WPTime_plugin_preloader_html_element(){
+
+	if(
+		get_option( 'wptpreloader_screen' ) == 'full'
+		or get_option( 'wptpreloader_screen' ) == 'homepage' and is_home()
+		or get_option( 'wptpreloader_screen' ) == 'posts' and is_single()
+		or get_option( 'wptpreloader_screen' ) == 'pages' and is_page()
+		or get_option( 'wptpreloader_screen' ) == 'cats' and is_category()
+		or get_option( 'wptpreloader_screen' ) == 'tags' and is_tag()
+		or get_option( 'wptpreloader_screen' ) == 'attachment' and is_attachment()
+	){
+		?>
+    		<div id="wptime-plugin-preloader"></div>
+    	<?php
+	}
+
+}
+add_action('wp_head', 'WPTime_plugin_preloader_html_element');
+
+
+// Include JavaScript
 function WPTime_plugin_preloader_script(){	
-	?>
-    	<div id="wptime-plugin-preloader"></div>
-    <?php	
 	wp_enqueue_script( 'wptime-plugin-preloader-script', plugins_url( '/js/preloader-script.js', __FILE__ ), array('jquery'), null, false);
 }
 add_action('wp_enqueue_scripts', 'WPTime_plugin_preloader_script');
@@ -92,6 +120,7 @@ add_action('wp_enqueue_scripts', 'WPTime_plugin_preloader_script');
 
 // Add CSS
 function WPTime_plugin_preloader_css(){
+	
 	if( get_option('wptpreloader_bg_color') ){
 		$background_color = get_option('wptpreloader_bg_color');
 	}else{
@@ -103,6 +132,17 @@ function WPTime_plugin_preloader_css(){
 	}else{
 		$preloader_image = plugins_url( '/images/preloader.GIF', __FILE__ );
 	}
+	
+	if(
+		get_option( 'wptpreloader_screen' ) == 'full'
+		or get_option( 'wptpreloader_screen' ) == 'homepage' and is_home()
+		or get_option( 'wptpreloader_screen' ) == 'posts' and is_single()
+		or get_option( 'wptpreloader_screen' ) == 'pages' and is_page()
+		or get_option( 'wptpreloader_screen' ) == 'cats' and is_category()
+		or get_option( 'wptpreloader_screen' ) == 'tags' and is_tag()
+		or get_option( 'wptpreloader_screen' ) == 'attachment' and is_attachment()
+	){
+		
 	?>
     	<style type="text/css">
 			#wptime-plugin-preloader{
@@ -122,6 +162,9 @@ function WPTime_plugin_preloader_css(){
 			}
 		</style>
     <?php
+	
+	}
+	
 }
 add_action('wp_head', 'WPTime_plugin_preloader_css');
 
