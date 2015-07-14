@@ -1,7 +1,7 @@
 === Preloader ===
 Contributors: Alobaidi
 Donate link: http://j.mp/WPTime_donations
-Tags: preloader, preload, responsive, retina, customize, custom, customizer, customizing, jquery, css3, image, images, Post, plugin, posts, page, widget, admin, sidebar, google, twitter, comments
+Tags: preloader, preload, responsive, retina, customize, custom, customizer, customizing, jquery, css3, loading, loader, image, images, Post, plugin, posts, page, widget, admin, sidebar, google, twitter, comments
 Requires at least: 2.8.0
 Tested up to: 4.2.2
 Stable tag: 1.0.3
