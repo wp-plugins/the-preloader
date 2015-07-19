@@ -76,6 +76,10 @@
                                         	<input type="radio" name="wptpreloader_screen" value="homepage" <?php checked( $display_preloader, 'homepage' ); ?>>In Home Page Only
                                         </label>
                                         <br>
+                                        <label title="Display Preloader in front page">
+                                        	<input type="radio" name="wptpreloader_screen" value="frontpage" <?php checked( $display_preloader, 'frontpage' ); ?>>In Front Page Only
+                                        </label>
+                                        <br>
                                         <label title="Display Preloader in posts only">
                                         	<input type="radio" name="wptpreloader_screen" value="posts" <?php checked( $display_preloader, 'posts' ); ?>>In Posts Only
                                         </label>
@@ -94,6 +98,10 @@
                                         <br>
                                         <label title="Display Preloader in attachment only">
                                         	<input type="radio" name="wptpreloader_screen" value="attachment" <?php checked( $display_preloader, 'attachment' ); ?>>In Attachment Only
+                                        </label>
+                                        <br>
+                                        <label title="Display Preloader in 404 error page">
+                                        	<input type="radio" name="wptpreloader_screen" value="404error" <?php checked( $display_preloader, '404error' ); ?>>In 404 Error Page Only
                                         </label>
                                     </fieldset>
                                 </td>
