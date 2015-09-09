@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Preloader
-Plugin URI: http://j.mp/1QRDUN0
+Plugin URI: http://wp-plugins.in/the-preloader
 Description: Add preloader to your website easily, responsive and retina, full customize, compatible with all major browsers.
-Version: 1.0.4
+Version: 1.0.6
 Author: Alobaidi
-Author URI: http://j.mp/1HVBgA6
+Author URI: http://wp-plugins.in
 License: GPLv2 or later
 */
 
@@ -35,7 +35,7 @@ function WPTime_preloader_plugin_row_meta( $links, $file ) {
 	if ( strpos( $file, 'preloader.php' ) !== false ) {
 		
 		$new_links = array(
-						'<a href="http://j.mp/1QRDUN0" target="_blank">Explanation of Use</a>',
+						'<a href="http://wp-plugins.in/the-preloader" target="_blank">Explanation of Use</a>',
 						'<a href="https://profiles.wordpress.org/alobaidi#content-plugins" target="_blank">More Plugins</a>',
 						'<a href="http://j.mp/ET_WPTime_ref_pl" target="_blank">Elegant Themes</a>',
 					);
@@ -80,37 +80,13 @@ add_filter( 'plugin_action_links', 'WPTime_preloader_plugin_action_links', 10, 5
 
 
 // Set default setting of display preloader (default is full website)
-if( !get_option('wptpreloader_default_screen') ){
+if( !get_option('wptpreloader_screen') ){
 	update_option('wptpreloader_screen', 'full');
-	update_option('wptpreloader_default_screen', 'full');
 }
 
 
 // Include Settings page
 include( plugin_dir_path(__FILE__).'/settings.php' );
-
-
-// Add Preloader HTML Element
-function WPTime_plugin_preloader_html_element(){
-
-	if(
-		get_option( 'wptpreloader_screen' ) == 'full'
-		or get_option( 'wptpreloader_screen' ) == 'homepage' and is_home()
-		or get_option( 'wptpreloader_screen' ) == 'frontpage' and is_front_page()
-		or get_option( 'wptpreloader_screen' ) == 'posts' and is_single()
-		or get_option( 'wptpreloader_screen' ) == 'pages' and is_page()
-		or get_option( 'wptpreloader_screen' ) == 'cats' and is_category()
-		or get_option( 'wptpreloader_screen' ) == 'tags' and is_tag()
-		or get_option( 'wptpreloader_screen' ) == 'attachment' and is_attachment()
-		or get_option( 'wptpreloader_screen' ) == '404error' and is_404()
-	){
-		?>
-    		<div id="wptime-plugin-preloader"></div>
-    	<?php
-	}
-
-}
-add_action('wp_head', 'WPTime_plugin_preloader_html_element');
 
 
 // Include JavaScript

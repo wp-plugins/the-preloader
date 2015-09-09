@@ -2,9 +2,9 @@
 Contributors: Alobaidi
 Donate link: http://j.mp/WPTime_donations
 Tags: preloader, preload, responsive, retina, customize, custom, customizer, customizing, jquery, css3, loading, loader, image, images, Post, plugin, posts, page, widget, admin, sidebar, google, twitter, comments
-Requires at least: 2.8.0
-Tested up to: 4.2.4
-Stable tag: 1.0.4
+Requires at least: 3.4.0
+Tested up to: 4.3
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,11 +28,12 @@ Add preloader to your website easily, responsive and retina, full customize, com
 
 ### Live Demo
 
-* [http://j.mp/1QRDUN0](http://j.mp/1QRDUN0)
+* [http://wp-plugins.in/the-preloader](http://wp-plugins.in/the-preloader)
 
 ### Rate The Plugin
 
 * [Please rate Preloader plugin](https://wordpress.org/support/view/plugin-reviews/the-preloader#postform)
+* [Read people reviews](https://wordpress.org/support/view/plugin-reviews/the-preloader)
 
 ### See Also
 
@@ -41,13 +42,9 @@ Add preloader to your website easily, responsive and retina, full customize, com
 * [Premium WordPress themes on Themeforest.](http://j.mp/TF_WPTime)
 * [Premium WordPress plugins on Codecanyon.](http://j.mp/CC_WPTime)
 
-### About
-
-* [The plugin designed and developed by Alobaidi.](http://j.mp/1HVBgA6)
-
 ### More Plugins
 
-* [My Plugins](https://profiles.wordpress.org/alobaidi/#content-plugins)
+* [My Plugins](https://profiles.wordpress.org/alobaidi#content-plugins)
 
 == Installation ==
 
@@ -55,16 +52,31 @@ Add preloader to your website easily, responsive and retina, full customize, com
 
 1. Upload 'the-preloader' folder to the '/wp-content/plugins/' directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Go to your wp-admin > Plugins > Preloader.
+3. Go to Plugins menu > Preloader.
 4. Enter your background color code and your preloader image link.
+5. Choose display preloader, default is "In Full Website".
+6. Open header.php file for your theme and insert preloader html element after body tag.
+
+[Read explanation of use.](http://wp-plugins.in/the-preloader)
 
 == Frequently Asked Questions ==
 
 ### FAQ
 
-* For more questions or help, [contact me](http://j.mp/1HVBgA6).
+* [Read explanation of use.](http://wp-plugins.in/the-preloader)
+* For more questions or help, [contact me](http://wp-plugins.in/1XnA5Qr).
+* [Or on Twitter.](http://wp-plugins.in/1L6zCZL)
 
 == Changelog ==
+
+= 1.0.6 =
+
+* Fixing preloader delay.
+* Note: please after plugin update go to Plugins menu > Preloader, and insert preloader html element after body tag in your header.php file for your theme, this is necessary.
+
+= 1.0.5 =
+
+* Fixing moves script to body html tag, now all script in head html tag, please update now this is necessary.
 
 = 1.0.4 =
 

@@ -15,6 +15,5 @@ if( ! defined( 'WP_UNINSTALL_PLUGIN' ) )
 delete_option('wptpreloader_bg_color');
 delete_option('wptpreloader_image');
 delete_option('wptpreloader_screen');
-delete_option('wptpreloader_default_screen');
 
 ?>
