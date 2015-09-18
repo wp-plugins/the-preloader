@@ -3,7 +3,7 @@ Contributors: Alobaidi
 Donate link: http://j.mp/WPTime_donations
 Tags: preloader, preload, responsive, retina, customize, custom, customizer, customizing, jquery, css3, loading, loader, image, images, Post, plugin, posts, page, widget, admin, sidebar, google, twitter, comments
 Requires at least: 3.4.0
-Tested up to: 4.3
+Tested up to: 4.3.1
 Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
