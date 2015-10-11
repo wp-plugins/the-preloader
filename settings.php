@@ -3,7 +3,7 @@
     defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
     function WPTime_preloader_settings() {
-        add_plugins_page( 'Preloader Settings', 'Preloader', 'update_core', 'WPTime_preloader_settings', 'WPTime_preloader_settings_page');
+        add_plugins_page( 'Preloader Settings', 'Preloader', 'manage_options', 'WPTime_preloader_settings', 'WPTime_preloader_settings_page');
     }
     add_action( 'admin_menu', 'WPTime_preloader_settings' );
     

@@ -4,7 +4,7 @@ Donate link: http://j.mp/WPTime_donations
 Tags: preloader, preload, responsive, retina, customize, custom, customizer, customizing, jquery, css3, loading, loader, image, images, Post, plugin, posts, page, widget, admin, sidebar, google, twitter, comments
 Requires at least: 3.4.0
 Tested up to: 4.3.1
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,6 +68,10 @@ Add preloader to your website easily, responsive and retina, full customize, com
 * [Or on Twitter.](http://wp-plugins.in/1L6zCZL)
 
 == Changelog ==
+
+= 1.0.7 =
+
+* < No Script > HTML tag added in < HEAD > to hide preloader if JavaScript is OFF in user browser.
 
 = 1.0.6 =
 
